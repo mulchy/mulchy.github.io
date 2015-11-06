@@ -1,0 +1,9 @@
+.contact-info, .title{
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contact-info, .title{
+	text-align: left;
+    }
+}
