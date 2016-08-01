@@ -1,9 +1,53 @@
-.contact-info, .title{
+.contact-info, .title, .skills {
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .contact-info, .title{
+  .contact-info, .title, .skills {
     text-align: left;
+  }
+}
+
+/* don't color icon links */
+.fa {
+  color: #000;
+}
+
+main {
+  margin-bottom: 5em;
+}
+
+body {
+  margin-top: 5em;
+}
+
+/* override bootstrap's printing of link hrefs */
+@media print {
+  a[href]:after {
+    content: none;
+  }
+
+  body {
+      margin-top: 0em;
+  }
+
+  .print-break {
+      page-break-after: always;
+  }
+
+  @page {
+      margin: .5in .5in .5in .5in;
+  }
+  .title {
+      width: 50%;
+      text-align: left;
+  }
+
+  .skills {
+      text-align: left;
+  }
+  .contact-info {
+      width: 49%;
+      text-align: right;
   }
 }
